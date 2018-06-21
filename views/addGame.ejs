@@ -1,0 +1,39 @@
+<% include partials/header %>
+    <style scoped>
+        form {
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 100px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <h1>
+        <%= title %>
+    </h1>
+    <form method="POST" action="/add">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="title" name="title">
+            <label class="mdl-textfield__label" for="title">Title...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="publisher" name="publisher">
+            <label class="mdl-textfield__label" for="publisher">Publisher...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="image_url" name="imageUrl">
+            <label class="mdl-textfield__label" for="imageUrl">imageUrl...</label>
+        </div>
+        <br>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+            Submit
+        </button>
+    </form>
+
+    <% include partials/footer %>
